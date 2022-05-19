@@ -10,17 +10,26 @@
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
+	<!-- @Controller를 빈으로 등록해준다 -->
 	<annotation-driven />
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<!-- 정적파일(css, js, img 등) 저장시킴 -->
+	<!-- 외부 파일을 이곳에 위치해야 인식(css나 자바스크립트 등) -->
 	<resources mapping="/resources/**" location="/resources/" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	
+	<!-- jsp 페이지의 경로를 만들어준다. prefix(앞에 붙음), suffix(뒤에 붙음) -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<!--
+	base-package에 설정된 경로부터 하위까지의 
+	특정 어노테이션들의 클래스들을 빈으로 만들어 준다
+	  -->
 	<context:component-scan base-package="com.care.root" />
 	
 	

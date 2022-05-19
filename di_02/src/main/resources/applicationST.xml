@@ -15,7 +15,7 @@
 
  -->
  
-<context:property-placeholder location="classpath:"/>
+<context:property-placeholder location="classpath:db.properties"/>
 <bean id="st01" class="com.care.root2.Student"/>
 <bean id="stb" class="com.care.root2.STBean">
 	<property name="st">
