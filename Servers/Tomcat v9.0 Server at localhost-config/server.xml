@@ -157,7 +157,9 @@
  	<Context docBase="di_02" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:di_02"/>
  -->   
  	
-      <Context docBase="mvc_03" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:mvc_03"/></Host>
+      <!--  <Context docBase="mvc_03" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:mvc_03"/>-->
+      <!-- <Context docBase="mvc_quiz" path="/member" reloadable="true" source="org.eclipse.jst.jee.server:mvc_quiz"/> -->
+      <Context docBase="mvc_quiz01" path="/member" reloadable="true" source="org.eclipse.jst.jee.server:mvc_quiz01"/></Host>
     </Engine>
   </Service>
 </Server>
