@@ -18,5 +18,16 @@ public class MemberService {
 	public void getM(Model model) {
 		model.addAttribute("list", dao.getM());
 	}
+	public int loginChk(String id, String pwd, Model model)
+	{	//select * from member where id=id
+		/*
+		 * MemberDTO dto = dao.loginChk(id); if(dto != null) {
+		 * if(dto.getPwd().equals("re",0)) { model.addAttribute(attributeValue) }
+		 * 
+		 * }else { model.addAttribute("re",1);
+		 * 
+		 * }
+		 */
+	}
 
 }
