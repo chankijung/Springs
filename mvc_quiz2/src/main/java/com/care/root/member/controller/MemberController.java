@@ -27,14 +27,14 @@ public class MemberController implements SessionName {
 	}
 	@PostMapping("logChk")
 	public String logChk(@RequestParam String id, @RequestParam String pwd,
-						RedirectAttributes ra
+						RedirectAttributes ra, Model model, HttpSession session
 							//,HttpServletRequest req
 			) {
 		int result= ms.logChk(id, pwd);
 		if(result==0) {
 			//ra.addFlashAttribute("id", id);			
-			ra.addAttribute("id",id); // 아이디를 받고 여기에 세션 부여
-
+			//ra.addAttribute("id",id); // 아이디를 받고 여기에 세션 부여
+			session.setAttribute("id",id);
 			return "redirect:successLogin";
 		}
 		return "redirect:login";
