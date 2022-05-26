@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<%@ include file="../default/header.jsp" %>
+		로그인 성공 페이지
+	<%@ include file="../default/footer.jsp" %>
 </body>
 </html>

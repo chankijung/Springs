@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%@ include file="../default/header.jsp" %>
+	<div class="wrap">
+		id:${info.id }<br>
+		pw:${info.pw }<br>
+		addr:${info.addr }<br>
+	</div>
+	<%@ include file="../default/footer.jsp" %>
 
 </body>
 </html>
