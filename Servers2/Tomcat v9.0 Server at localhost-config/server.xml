@@ -153,10 +153,11 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       <!--  <Context docBase="mvc_04" path="/mvc04" reloadable="true" source="org.eclipse.jst.jee.server:mvc_04"/>
-	  <Context docBase="mvc_quiz" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:mvc_quiz"/>-->
+	  <Context docBase="mvc_quiz" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:mvc_quiz"/>
       <Context docBase="mybatis" path="/mybatis" reloadable="true" source="org.eclipse.jst.jee.server:mybatis"/>
-   <!--  <Context docBase="mvc_quiz2" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:mvc_quiz2"/>-->
-      <Context docBase="s_project01" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:s_project01"/></Host>
+<Context docBase="mvc_quiz2" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:mvc_quiz2"/>
+      <Context docBase="s_project01" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:s_project01"/>-->
+      <Context docBase="file01" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:file01"/></Host>
     </Engine>
   </Service>
 </Server>

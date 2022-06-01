@@ -67,12 +67,12 @@ public class MemberController {
 		return "rs_no";
 	}
 	
-	@PostMapping("loginChk")
-	public String loginChk(@RequestParam String id,
-		@RequestParam String pwd,
-		Model model) {
-		int result = ms.loginChk(id,pwd,model)
-		
-	}
-
+	/*
+	 * @PostMapping("loginChk") public String loginChk(@RequestParam String id,
+	 * 
+	 * @RequestParam String pwd, Model model) { int result =
+	 * ms.loginChk(id,pwd,model)
+	 * 
+	 * }
+	 */
 }
