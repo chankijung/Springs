@@ -1,8 +1,10 @@
 package com.care.root.service;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,6 +52,29 @@ public class FileServiceImpl implements FileService{
 	@Override
 	public void getImages(Model model) {
 		model.addAttribute("list", fm.getImages());
+	}
+
+	@Override
+	public void fileProcess02(MultipartHttpServletRequest mul) {
+		String imgN ="";
+		Iterator<String> it= mul.getFileNames();
+		while(it.hasNext()) {
+		//	System.out.println(it.next());
+			MultipartFile file = mul.getFile(it.next());
+			System.out.println(file.getOriginalFilename());
+			
+			imgN = "";
+			if(!file.isEmpty()) { //file.isEmpty() != 
+				File f= new File(IMAGE_REPO+file.getOriginalFilename());
+				imgN += IMAGE_REPO + file.getOriginalFilename()+",";
+				try {
+					file.transferTo(f);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		System.out.println(imgN);
 	}
 
 }

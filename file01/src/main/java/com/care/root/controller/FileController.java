@@ -76,4 +76,14 @@ public class FileController {
 		FileCopyUtils.copy(in, response.getOutputStream());//왼쪽에 있는 값을 오른쪽으로 카피하겠다
 		in.close();
 	}
+	
+	@GetMapping("form02")
+	public String form02() {
+		return "uploadForm02";
+	}
+	@PostMapping("/upload2")
+	public String upload2(MultipartHttpServletRequest mul) {
+		fs.fileProcess02(mul);
+		return "redirect:form";
+	}
 }

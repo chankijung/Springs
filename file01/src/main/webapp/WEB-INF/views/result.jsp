@@ -23,5 +23,8 @@
 
 </c:forEach>
 	<a href="form">다시 업로드</a>
+	
+	
+썸네일
 </body>
 </html>
