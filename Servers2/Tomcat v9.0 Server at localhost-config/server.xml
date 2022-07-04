@@ -158,7 +158,9 @@
 <Context docBase="mvc_quiz2" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:mvc_quiz2"/>-->
     
  <!--      <Context docBase="file01" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:file01"/> -->
-      <Context docBase="ajax01" path="/ajax" reloadable="true" source="org.eclipse.jst.jee.server:ajax01"/><Context docBase="s_project01" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:s_project01"/></Host>
+    <!--    <Context docBase="ajax01" path="/ajax" reloadable="true" source="org.eclipse.jst.jee.server:ajax01"/>-->
+    <!-- <Context docBase="s_project01" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:s_project01"/>   --> 
+      <Context docBase="s_project" path="/mybatis" reloadable="true" source="org.eclipse.jst.jee.server:s_project"/></Host>
     </Engine>
   </Service>
 </Server>

@@ -13,22 +13,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 public class CookieController {
+	
 	public void cookie(
 		HttpServletResponse response,
 		HttpServletRequest request,
 		@CookieValue(value="myCookie", required = false) Cookie co) {
-		System.out.println("co: "+co);
-		Cookie[] cookies= request.getCookies();
-	for(Cookie c: cookies) {
-		System.out.println(c.getValue());
-		System.out.println(c.getName());
-		System.out.println("=============");
-	}
-	Cookie cook= new Cookie("myCookie", "testCookie");
-	//cook.setPath("/");
-	cook.getMaxAge();
-	response.addCookie(cook);
-	}
+		
+			System.out.println("co: "+co);
+			Cookie[] cookies= request.getCookies();
+			for(Cookie c: cookies) {
+				System.out.println(c.getValue());
+				System.out.println(c.getName());
+				System.out.println("=============");
+			}
+		Cookie cook= new Cookie("myCookie", "testCookie");
+		//cook.setPath("/");
+		cook.getMaxAge();
+		response.addCookie(cook);
+		}
 	 
 	
 

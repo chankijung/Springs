@@ -84,7 +84,7 @@ nav ul li a:hover {
 				<ul>
 					<li><a href="${contextPath }/index">HOME</a></li>
 <li>
-	<a href="${contextPath }/member/memberInfo">회원정보</a>
+	<a href="${contextPath }/test/memberInfo">회원정보</a>
 </li>
 
 <li>

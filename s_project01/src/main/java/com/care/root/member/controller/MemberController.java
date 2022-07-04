@@ -30,6 +30,8 @@ public class MemberController implements SessionName{
 	public String loginForm() {
 		return "member/login";
 	}
+	
+	
 	@PostMapping("/logChk")
 	public String logChk(//HttpServletRequest req
 						@RequestParam String id,
@@ -95,6 +97,7 @@ public class MemberController implements SessionName{
 		session.invalidate();
 		return "redirect:/index";
 	}
+	
 	@GetMapping("memberInfo")
 	public String memberInfo(Model model) {
 		ms.memberInfo(model);
